@@ -11,10 +11,9 @@ public class HuffmanEncoding {
 	private TreeNode temp;
 	
 	public void getCharFreq(String testString) {
-		char [] charArray = new char[testString.length()];
 		
 		// Calculating the frequencies of characters present in the string. 
-		charArray = testString.toCharArray();
+		char [] charArray = testString.toCharArray();
 		for(char ch : charArray){
 			if(charFrequencies.containsKey(ch)){
 				charFrequencies.put(ch, ((int) charFrequencies.get(ch))+1);
