@@ -23,7 +23,7 @@ public class HuffmanCodingTest {
 		it = huffmanBinaryCodes.entrySet().iterator();
 		while (it.hasNext()) {
 			Map.Entry<Character, String> entry = (Map.Entry<Character, String>) it.next();
-			System.out.println(entry.getKey()+"   "+entry.getValue());
+			System.out.println(entry.getKey()+" -->> "+entry.getValue());
 		}
 		System.out.println("\n");
 		
@@ -39,7 +39,7 @@ public class HuffmanCodingTest {
 		it = huffmanBinaryCodes.entrySet().iterator();
 		while (it.hasNext()) {
 			Map.Entry<Character, String> entry = (Map.Entry<Character, String>) it.next();
-			System.out.println(entry.getKey()+"   "+entry.getValue());
+			System.out.println(entry.getKey()+" -->> "+entry.getValue());
 		}
 		System.out.println("\n");
 	}
