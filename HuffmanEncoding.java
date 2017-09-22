@@ -23,6 +23,7 @@ public class HuffmanEncoding {
 		}
 	}
 	
+        // Building the character nodes to be added in Priority Queue
 	public void bldCharNodesPQ() {
 		Iterator<Map.Entry<Character, Integer>> it = charFrequencies.entrySet().iterator();
 		while (it.hasNext()) {
@@ -36,6 +37,8 @@ public class HuffmanEncoding {
 		}
 	}
 	
+	// Building the Tree based on the 2 least frequencies, 
+	// to be used to build the Huffman Codes for every character
 	public void bldHuffmanTree() {
 		for (int i=1;i<charFrequencies.size();i++) {
 			temp = new TreeNode();
@@ -49,7 +52,9 @@ public class HuffmanEncoding {
 	public TreeNode getHuffmanTreeRoot(){
 		return PQ.remove();
 	}
-	
+
+	// Traversing the Huffman Code Tree recusively to get huffman codes for characters
+	// It will concatinate '0' until it finds a leaf node	
 	public HashMap<Character, String> getHuffmanCodes(TreeNode root, String code) {
 		if(root != null){
 			if(root.getLeftChild()!= null && root.getRightChild()!= null ){
